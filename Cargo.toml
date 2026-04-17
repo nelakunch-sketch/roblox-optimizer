@@ -1,0 +1,39 @@
+[package]
+name = "roblox-optimizer"
+version = "1.0.0"
+edition = "2021"
+authors = ["Sashimi_Dev"]
+description = "Optimizer for Roblox — Open Source"
+license = "MIT"
+repository = "https://github.com/nelakunch-sketch/roblox-optimizer"
+keywords = ["windows", "optimization", "roblox", "winapi", "performance"]
+
+[[bin]]
+name = "RobloxOptimizer"
+path = "src/main.rs"
+
+[dependencies]
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_Security",
+    "Win32_Security_Authorization",
+    "Win32_System_Memory",
+    "Win32_System_SystemInformation",
+] }
+winreg = "0.52"
+colored = "2.1"
+anyhow = "1.0"
+ctrlc = "3.4"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[build-dependencies]
+winres = "0.1"

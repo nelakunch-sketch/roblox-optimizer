@@ -1,0 +1,11 @@
+E:\Godly\Roblox-Ultra-Optimizer\target\release\deps\ctrlc-681c2d51bb30f0ae.d: C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\lib.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\error.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\platform\mod.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\platform\windows\mod.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\signal.rs
+
+E:\Godly\Roblox-Ultra-Optimizer\target\release\deps\libctrlc-681c2d51bb30f0ae.rlib: C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\lib.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\error.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\platform\mod.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\platform\windows\mod.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\signal.rs
+
+E:\Godly\Roblox-Ultra-Optimizer\target\release\deps\libctrlc-681c2d51bb30f0ae.rmeta: C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\lib.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\error.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\platform\mod.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\platform\windows\mod.rs C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\signal.rs
+
+C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\lib.rs:
+C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\error.rs:
+C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\platform\mod.rs:
+C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\platform\windows\mod.rs:
+C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ctrlc-3.5.2\src\signal.rs:

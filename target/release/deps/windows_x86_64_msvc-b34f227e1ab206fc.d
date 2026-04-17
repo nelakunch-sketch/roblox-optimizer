@@ -1,0 +1,7 @@
+E:\Godly\Roblox-Ultra-Optimizer\target\release\deps\windows_x86_64_msvc-b34f227e1ab206fc.d: C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows_x86_64_msvc-0.48.5\src\lib.rs
+
+E:\Godly\Roblox-Ultra-Optimizer\target\release\deps\libwindows_x86_64_msvc-b34f227e1ab206fc.rlib: C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows_x86_64_msvc-0.48.5\src\lib.rs
+
+E:\Godly\Roblox-Ultra-Optimizer\target\release\deps\libwindows_x86_64_msvc-b34f227e1ab206fc.rmeta: C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows_x86_64_msvc-0.48.5\src\lib.rs
+
+C:\Users\Sashimi\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows_x86_64_msvc-0.48.5\src\lib.rs:
