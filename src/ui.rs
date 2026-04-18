@@ -2,8 +2,7 @@
 
 use colored::Colorize;
 
-pub const APP_VERSION: &str = "1.0.0";
-pub const APP_NAME: &str = "RobloxOptimizer";
+pub const APP_VERSION: &str = "2.0.0";
 
 /// Prints the ASCII art banner.
 pub fn print_banner() {
@@ -41,34 +40,28 @@ pub fn print_banner() {
     println!();
 }
 
-/// Prints a section header (e.g., "[ Timer Resolution ]").
 pub fn section(title: &str) {
     println!();
     println!("  {} {}", "▶".bright_cyan(), title.bright_white().bold());
     println!("  {}", "─".repeat(50).bright_black());
 }
 
-/// Print a success line: ✔ message
 pub fn ok(msg: &str) {
     println!("    {} {}", "✔".bright_green().bold(), msg.bright_white());
 }
 
-/// Print an info line: ℹ message
 pub fn info(msg: &str) {
     println!("    {} {}", "ℹ".bright_blue(), msg);
 }
 
-/// Print a warning line: ⚠ message
 pub fn warn(msg: &str) {
     println!("    {} {}", "⚠".yellow(), msg.yellow());
 }
 
-/// Print an error line: ✘ message
 pub fn err(msg: &str) {
     println!("    {} {}", "✘".bright_red().bold(), msg.bright_red());
 }
 
-/// Print a key-value pair.
 pub fn kv(key: &str, value: &str) {
     println!(
         "    {:.<40} {}",

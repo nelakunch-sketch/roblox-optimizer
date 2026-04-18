@@ -20,15 +20,15 @@ const STATUS_SUCCESS: i32 = 0;
 pub const TARGET_RESOLUTION_HNS: u32 = 5_000;
 
 type FnNtQueryTimerResolution = unsafe extern "system" fn(
-    MinimumResolution: *mut u32,
-    MaximumResolution: *mut u32,
-    CurrentResolution: *mut u32,
+    minimum_resolution: *mut u32,
+    maximum_resolution: *mut u32,
+    current_resolution: *mut u32,
 ) -> i32;
 
 type FnNtSetTimerResolution = unsafe extern "system" fn(
-    DesiredResolution: u32,
-    SetResolution: u8, // BOOLEAN: 1 = set, 0 = restore
-    CurrentResolution: *mut u32,
+    desired_resolution: u32,
+    set_resolution: u8, // BOOLEAN: 1 = set, 0 = restore
+    current_resolution: *mut u32,
 ) -> i32;
 
 fn get_ntdll_proc<T>(name: &[u8]) -> Result<T> {
@@ -84,6 +84,7 @@ pub fn set_resolution(desired_hns: u32) -> Result<u32> {
     Ok(actual)
 }
 
+#[allow(dead_code)]
 pub fn restore_resolution() -> Result<()> {
     let set_fn: FnNtSetTimerResolution = get_ntdll_proc(b"NtSetTimerResolution\0")?;
 
@@ -102,6 +103,7 @@ pub fn restore_resolution() -> Result<()> {
 #[derive(Debug, Clone, Copy)]
 pub struct TimerResolutionInfo {
     /// Slowest possible resolution (largest interval).
+    #[allow(dead_code)]
     pub min_hns: u32,
     /// Fastest possible resolution (smallest interval).
     pub max_hns: u32,
@@ -113,6 +115,7 @@ impl TimerResolutionInfo {
     pub fn current_ms(&self) -> f64 {
         self.current_hns as f64 / 10_000.0
     }
+    #[allow(dead_code)]
     pub fn min_ms(&self) -> f64 {
         self.min_hns as f64 / 10_000.0
     }

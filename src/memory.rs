@@ -18,9 +18,9 @@ enum MemoryListCommand {
 }
 
 type FnNtSetSystemInformation = unsafe extern "system" fn(
-    SystemInformationClass: i32,
-    SystemInformation: *mut std::ffi::c_void,
-    SystemInformationLength: u32,
+    system_information_class: i32,
+    system_information: *mut std::ffi::c_void,
+    system_information_length: u32,
 ) -> i32;
 
 fn get_ntdll_proc<T>(name: &[u8]) -> Result<T> {
@@ -51,8 +51,10 @@ pub fn ram_status() -> (u64, u64) {
 }
 
 pub struct MemoryResult {
+    #[allow(dead_code)]
     pub avail_before_mib: u64,
     pub avail_after_mib: u64,
+    #[allow(dead_code)]
     pub total_mib: u64,
     pub freed_mib: i64,
 }

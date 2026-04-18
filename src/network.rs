@@ -25,7 +25,7 @@
 //     DefaultReceiveWindow      = 65536
 //     DefaultSendWindow         = 65536
 //
-// ⚠ A reboot (or at least disabling/re-enabling the NIC) is required for
+//  A reboot (or at least disabling/re-enabling the NIC) is required for
 //   some per-adapter values to take effect.
 
 use anyhow::{Context, Result};
