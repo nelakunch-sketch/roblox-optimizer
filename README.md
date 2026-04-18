@@ -2,10 +2,6 @@
 
 > Windows System Optimizer for Roblox — **Open Source**
 
-```
-
-```
-
 ---
 
 ## ✅ What it does (and does NOT do)
