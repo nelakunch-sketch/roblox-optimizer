@@ -2,7 +2,7 @@
 name = "roblox-optimizer"
 version = "1.0.0"
 edition = "2021"
-authors = ["Sashimi_Dev"]
+authors = ["sashimi_Dev"]
 description = "Optimizer for Roblox — Open Source"
 license = "MIT"
 repository = "https://github.com/nelakunch-sketch/roblox-optimizer"

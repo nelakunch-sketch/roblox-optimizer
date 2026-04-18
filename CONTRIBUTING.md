@@ -26,7 +26,7 @@ rustup toolchain install stable
 rustup target add x86_64-pc-windows-msvc
 
 # Clone
-git clone https://github.com/yourusername/roblox-optimizer
+git clone https://github.com/nelakunch-sketch/roblox-optimizer
 cd roblox-optimizer
 
 # Run in debug mode (still needs Admin for most features)
@@ -63,6 +63,7 @@ cargo fmt --all
 ## 💡 Ideas Welcome
 
 Good first contributions:
+
 - Power plan switching (`SetActivePwrScheme` / `PowerSetActiveScheme`)
 - MMCSS profile registration for the Roblox process
 - Auto-detect Roblox launch and re-apply optimizations

@@ -1,4 +1,4 @@
-// src/ui.rs — UI helpers: banner, status printing, section headers.
+// src/ui.rs
 
 use colored::Colorize;
 
@@ -7,7 +7,9 @@ pub const APP_NAME: &str = "RobloxOptimizer";
 
 /// Prints the ASCII art banner.
 pub fn print_banner() {
-    println!("{}", r#"
+    println!(
+        "{}",
+        r#"
  ██████╗  ██████╗ ██████╗ ██╗      ██████╗ ██╗  ██╗
  ██╔══██╗██╔═══██╗██╔══██╗██║     ██╔═══██╗╚██╗██╔╝
  ██████╔╝██║   ██║██████╔╝██║     ██║   ██║ ╚███╔╝ 
@@ -19,7 +21,10 @@ pub fn print_banner() {
     ██║   ██║██████╔╝   ██║   ██║██╔████╔██║██║  ███╔╝ █████╗  ██████╔╝
     ██║   ██║██╔═══╝    ██║   ██║██║╚██╔╝██║██║ ███╔╝  ██╔══╝  ██╔══██╗
     ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
-     ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝"#.bright_cyan().bold());
+     ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝"#
+            .bright_cyan()
+            .bold()
+    );
 
     println!(
         "  {} {} — {}",
@@ -30,7 +35,7 @@ pub fn print_banner() {
     println!(
         "  {} {}",
         "⚠ ".yellow(),
-        "No code injection | No memory tampering | Anti-cheat safe".bright_green()
+        "No code injection | No memory tampering".bright_green()
     );
     println!("{}", "─".repeat(70).bright_black());
     println!();
@@ -39,11 +44,7 @@ pub fn print_banner() {
 /// Prints a section header (e.g., "[ Timer Resolution ]").
 pub fn section(title: &str) {
     println!();
-    println!(
-        "  {} {}",
-        "▶".bright_cyan(),
-        title.bright_white().bold()
-    );
+    println!("  {} {}", "▶".bright_cyan(), title.bright_white().bold());
     println!("  {}", "─".repeat(50).bright_black());
 }
 
@@ -80,10 +81,7 @@ pub fn kv(key: &str, value: &str) {
 pub fn summary(results: &[(String, bool, String)]) {
     println!();
     println!("{}", "─".repeat(70).bright_black());
-    println!(
-        "  {}",
-        "OPTIMIZATION SUMMARY".bright_white().bold()
-    );
+    println!("  {}", "OPTIMIZATION SUMMARY".bright_white().bold());
     println!("{}", "─".repeat(70).bright_black());
     for (task, success, detail) in results {
         let (icon, color_task) = if *success {

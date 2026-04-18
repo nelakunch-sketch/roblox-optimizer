@@ -1,16 +1,4 @@
 // src/main.rs
-//
-// RobloxOptimizer — Windows System Optimizer for Roblox
-// Open Source, MIT License.
-//
-// ══════════════════════════════════════════════════════════════
-//  ⚠ ANTI-CHEAT SAFE:
-//    • No DLL injection
-//    • No process memory read/write
-//    • No hooking / detouring
-//    • Only OS-level APIs (WinAPI / Registry / NT Native APIs)
-// ══════════════════════════════════════════════════════════════
-
 #![cfg_attr(not(debug_assertions), windows_subsystem = "console")]
 
 mod memory;
@@ -24,10 +12,8 @@ use colored::Colorize;
 use std::io::{self, Write};
 
 fn main() {
-    // ── Banner ────────────────────────────────────────────────────────────────
     ui::print_banner();
 
-    // ── Admin check ──────────────────────────────────────────────────────────
     if !is_elevated() {
         ui::err("This program requires Administrator privileges.");
         ui::err("Right-click → 'Run as administrator'.");
@@ -36,7 +22,6 @@ fn main() {
     }
     ui::ok("Running as Administrator");
 
-    // ── Main interactive loop ─────────────────────────────────────────────────
     loop {
         print_menu();
         let choice = read_line().trim().to_lowercase();
@@ -62,10 +47,7 @@ fn main() {
     ui::press_enter_to_exit();
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // Menu
-// ─────────────────────────────────────────────────────────────────────────────
-
 fn print_menu() {
     println!();
     println!("  {}", "SELECT OPTIMIZATION:".bright_white().bold());
@@ -112,10 +94,7 @@ fn read_line() -> String {
     buf
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // Admin elevation check
-// ─────────────────────────────────────────────────────────────────────────────
-
 fn is_elevated() -> bool {
     use windows::Win32::Foundation::HANDLE;
     use windows::Win32::Security::{
