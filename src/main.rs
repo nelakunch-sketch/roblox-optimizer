@@ -52,10 +52,6 @@ fn main() {
     ui::press_enter_to_exit();
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Menu
-// ─────────────────────────────────────────────────────────────────────────────
-
 fn print_menu() {
     println!();
     println!("  {}", "SELECT OPTIMIZATION:".bright_white().bold());
@@ -105,10 +101,6 @@ fn print_menu() {
     print!("  {} ", "Choice:".bright_white());
     let _ = io::stdout().flush();
 }
-
-// ─────────────────────────────────────────────────────────────────────────────
-// FastFlags Menu
-// ─────────────────────────────────────────────────────────────────────────────
 
 fn run_fastflags_menu() {
     loop {
@@ -568,7 +560,6 @@ fn run_restore() {
         Err(e) => ui::err(&format!("Restore failed: {}", e)),
     }
 }
-
 fn step_timer(summary: &mut Vec<(String, bool, String)>) {
     ui::section("System Timer Resolution");
     match timer::apply() {
@@ -658,21 +649,22 @@ fn step_memory(summary: &mut Vec<(String, bool, String)>) {
     match memory::apply() {
         Ok(r) => {
             ui::kv("Available after", &format!("{} MiB", r.avail_after_mib));
+            ui::kv("Method", &r.method);
             let freed = r.freed_mib;
             if freed > 0 {
-                ui::ok(&format!("Freed ~{} MiB from standby list", freed));
+                ui::ok(&format!("Freed ~{} MiB", freed));
             } else {
-                ui::info("Standby list was already mostly empty.");
+                ui::info("Working sets trimmed; standby list was already lean.");
             }
             summary.push((
-                "RAM Standby Purge".to_string(),
+                "RAM Purge".to_string(),
                 true,
                 format!("+{} MiB freed", freed.max(0)),
             ));
         }
         Err(e) => {
             ui::err(&format!("RAM purge failed: {}", e));
-            summary.push(("RAM Standby Purge".to_string(), false, e.to_string()));
+            summary.push(("RAM Purge".to_string(), false, e.to_string()));
         }
     }
 }

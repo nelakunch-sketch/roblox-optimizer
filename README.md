@@ -33,10 +33,17 @@
 ```powershell
 # Install Rust target if needed
 rustup target add x86_64-pc-windows-msvc
+```
 
 # Clone and build
-git clone https://github.com/nelakunch-sketch/roblox-optimizer
+
+```
+git clone https://github.com/nelakunch-sketch/roblox-optimizer.git
+```
+
 cd roblox-optimizer
+
+```
 cargo build --release
 ```
 

@@ -1,20 +1,20 @@
 #pragma code_page(65001)
 1 VERSIONINFO
-FILEFLAGS 0x0
-FILEVERSION 2, 0, 0, 0
 FILEOS 0x40004
-PRODUCTVERSION 2, 0, 0, 0
 FILESUBTYPE 0x0
-FILETYPE 0x1
+FILEVERSION 2, 0, 0, 0
+FILEFLAGS 0x0
+PRODUCTVERSION 2, 0, 0, 0
 FILEFLAGSMASK 0x3f
+FILETYPE 0x1
 {
 BLOCK "StringFileInfo"
 {
 BLOCK "000004b0"
 {
 VALUE "FileVersion", "2.0.0"
-VALUE "FileDescription", "roblox-optimizer"
 VALUE "ProductName", "roblox-optimizer"
+VALUE "FileDescription", "roblox-optimizer"
 VALUE "ProductVersion", "2.0.0"
 }
 }
